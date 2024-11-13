@@ -3,6 +3,8 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+#include <math.h>
+
 void errorCallback(int error, const char *description)
 {
     std::cerr << "GLFW Error " << error << ": " << description << std::endl;
@@ -27,7 +29,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // Required on Mac
 
     // Create window
-    GLFWwindow *window = glfwCreateWindow(1200, 900, "Virtual Universe!", nullptr, nullptr);
+    GLFWwindow *window = glfwCreateWindow(1200, 900, "The Game Engine", nullptr, nullptr);
     if (!window)
     {
         std::cerr << "Failed to create GLFW window" << std::endl;
